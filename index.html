@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern POS System</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    
+    <nav>
+        <ul>
+            <li><button class="navigation" onclick="home()">HOME</button></li>
+            <li><button class="navigation" onclick="shop()">SHOP</button></li>
+        </ul>
+    </nav>
+    
+   
+    <div id="header">
+        <img src="media/logo.png">
+    </div>
+
+    <h1>! Our Best Sellers !</h1>
+
+    <div>
+        <div class="bestSellers">
+            <img src="media/icedTea.jpg" class="product" alt="Iced Tea">
+            <span>ICED TEA</span>
+            <span>₱55.00</span>
+        </div>
+
+        <div class="bestSellers">
+            <img src="media/sisig.jpg" class="product" alt="Sisig">
+            <span>SISIG</span>
+            <span>₱90.00</span>
+        </div>
+
+        <div class="bestSellers">
+            <img src="media/cinnamonRolls.jpg" class="product" alt="Cinnamon Rolls">
+            <span>CINNAMON ROLLS</span>
+            <span>₱50.00</span>
+        </div>
+    </div>
+
+    <h3 onclick="shop()" id="viewShop">View Shop</h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
