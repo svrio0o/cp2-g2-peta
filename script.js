@@ -1,3 +1,11 @@
+function shop() {
+    window.location.href = "shop.html"
+}
+
+function home() {
+    window.location.href = "index.html"
+}
+
 
         // Array to hold items added to the cart
         let cart = [];
@@ -54,7 +62,7 @@
                 // Add the item name, quantity, and total price
                 cartItemDiv.innerHTML = `
                     <span>${item.name} x${item.quantity}</span>
-                    <span>$${item.totalPrice.toFixed(2)}</span>
+                    <span>₱${item.totalPrice.toFixed(2)}</span>
                 `;
 
                 // Add a remove button
@@ -68,7 +76,7 @@
             });
 
             // Update the total price
-            document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            document.getElementById('totalPrice').innerText = `₱${totalPrice.toFixed(2)}`;
         }
 
         // Function to remove an item from the cart
@@ -86,7 +94,7 @@
             const totalPrice = cart.reduce((sum, item) => sum + item.totalPrice, 0).toFixed(2);
             
             // Prompt the user to enter the amount paid
-            const amountPaid = parseFloat(prompt(`Total price is $${totalPrice}. Please enter the amount paid:`));
+            const amountPaid = parseFloat(prompt(`Total price is ₱${totalPrice}. Please enter the amount paid:`));
             
             // Validate the amount paid
             if (isNaN(amountPaid) || amountPaid < totalPrice) {
@@ -100,21 +108,21 @@
             // Gather list of items purchased
             let itemsPurchased = '';
             cart.forEach((item) => {
-                itemsPurchased += `${item.name.padEnd(20)} x${String(item.quantity).padEnd(3)} $${item.totalPrice.toFixed(2).padStart(6)}\n`;
+                itemsPurchased += `${item.name.padEnd(20)} x${String(item.quantity).padEnd(3)} ₱${item.totalPrice.toFixed(2).padStart(6)}\n`;
             });
             
             // Format the receipt with the company name, sections, and alignment
             const receipt = `
-Holy Trinity Thrifts
+Platito's Dishes & Sweets
 ---------------------------
 Receipt
 ---------------------------
 Items Purchased:
 ${itemsPurchased}
 ---------------------------
-Total Price: $${totalPrice}
-Amount Paid:  $${amountPaid}
-Change:       $${change}
+Total Price: ₱${totalPrice}
+Amount Paid:  ₱${amountPaid}
+Change:       ₱${change}
 ---------------------------
 Thank you for shopping with us!
     `;
@@ -142,4 +150,3 @@ Thank you for shopping with us!
                 document.getElementById('customQuantity').disabled = (this.value === 'single');
             });
         });
-    

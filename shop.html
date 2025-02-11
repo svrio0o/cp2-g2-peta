@@ -8,64 +8,201 @@
 <body>
     <nav>
         <ul>
-            <li>HOME</li>
-            <li>SHOP</li>
-            <li>ABOUT</li>
-            <li>CONTACT</li>
+            <li><button class="navigation" onclick="home()"">HOME</button></li>
+            <li><button class="navigation" onclick="shop()">SHOP</button></li>
+            <li><button class="navigation">ABOUT</button></li>
+            <li><button class="navigation">CONTACT</li>
         </ul>
     </nav>
-    <h1> POS System</h1>
 
-    <!-- Items available for purchase -->
-    <div id="items">
-        <h2>Available Items</h2>
-        <!-- Define each item as a clickable image -->
-        <div class="item" data-item="Adobo" data-price="50">
-            <img src="https://via.placeholder.com/50" alt="Item A" onclick="selectItem('Adobo', 50)">
-            <span>Adobo</span>
-            <span>$50</span>
+    
+    <div id="header">
+        <img src="media/logo.png">
+    </div>
+    <div id="whole">
+        <div id="left">
+            <!-- Items available for purchase -->
+            <div id="items">
+                <h2 class="shop">Menu</h2>
+                
+                <h4>Meals</h4>
+                <div class="menu">
+                    <div class="item" data-item="Fish & Chips" data-price="100">
+                        <img src="media/fishAndChips.jpg" alt="Fish & Chips" class="product" onclick="selectItem('Fish & Chips', 100)">
+                        <span>FISH & CHIPS</span>
+                        <span>₱100</span>
+                    </div>
+                    
+                    <div class="item" data-item="Miso Soup" data-price="50">
+                        <img src="media/misoSoup.jpg" alt="Miso Soup" class="product" onclick="selectItem('Miso Soup', 50)">
+                        <span>MISO SOUP</span>
+                        <span>₱50</span>
+                    </div>
+                    
+                    <div class="item" data-item="Sweet and Sour Pork" data-price="90">
+                        <img src="media/sweetAndSourPork.jpg" alt="Sweet and Sour Pork" class="product" onclick="selectItem('Sweet and Sour Pork', 90)">
+                        <span>SWEET AND SOUR PORK</span>
+                        <span>₱90</span>
+                    </div>
+                    
+                    <div class="item" data-item="Sisig" data-price="90">
+                        <img src="media/sisig.jpg" alt="Sisig" class="product" onclick="selectItem('Sisig', 90)">
+                        <span>SISIG</span>
+                        <span>₱90</span>
+                    </div>
+                    
+                    <div class="item" data-item="English Breakfast" data-price="100">
+                        <img src="media/englishBreakfast.jpg" alt="English Breakfast" class="product" onclick="selectItem('English Breakfast', 100)">
+                        <span>ENGLISH BREAKFAST</span>
+                        <span>₱100</span>
+                    </div>
+                </div>
+
+                    
+                <h4>Desserts</h4>
+                <div class="menu">
+                <div class="item" data-item="Cinnamon Rolls" data-price="50">
+                    <img src="media/cinnamonRolls.jpg" alt="Cinnamon Rolls" class="product" onclick="selectItem('Cinnamon Rolls', 50)">
+                    <span>CINNAMON ROLLS</span>
+                    <span>₱50</span>
+                </div>
+                
+                <div class="item" data-item="Tiramisu" data-price="50">
+                    <img src="media/tiramisu.jpg" alt="Tiramisu" class="product" onclick="selectItem('Tiramisu', 50)">
+                    <span>TIRAMISU</span>
+                    <span>₱50</span>
+                </div>
+                
+                <div class="item" data-item="Chocolate Lava Cake" data-price="250">
+                    <img src="media/chocolateLavaCake.jpg" alt="Chocolate Lava Cake" class="product" onclick="selectItem('Chocolate Lava Cake', 250)">
+                    <span>CHOCOLATE LAVA CAKE</span>
+                    <span>₱250</span>
+                </div>
+                
+                <div class="item" data-item="Cheesecake" data-price="200">
+                    <img src="media/cheesecake.jpg" alt="Cheesecake" class="product" onclick="selectItem('Cheesecake', 200)">
+                    <span>CHEESECAKE</span>
+                    <span>₱200</span>
+                </div>
+                
+                <div class="item" data-item="Apple Pie" data-price="150">
+                    <img src="media/applePie.jpg" alt="Apple Pie" class="product" onclick="selectItem('Apple Pie', 150)">
+                    <span>APPLE PIE</span>
+                    <span>₱150</span>
+                </div>
+                
+                <div class="item" data-item="Crème Brûlée" data-price="300">
+                    <img src="media/cremeBrulee.jpg" alt="Crème Brûlée" class="product" onclick="selectItem('Crème Brûlée', 300)">
+                    <span>CRÈME BRÛLÉE</span>
+                    <span>₱300</span>
+                </div>
+                
+                <div class="item" data-item="Ice Cream" data-price="50">
+                    <img src="media/iceCream.jpg" alt="Ice Cream" class="product" onclick="selectItem('Ice Cream', 50)">
+                    <span>ICE CREAM</span>
+                    <span>₱50</span>
+                </div>
+            </div>
+
+                <h4>Drinks</h4>
+                <div class="menu">
+                <!-- Define each item as a clickable image -->
+                    <div class="item" data-item="Adobo" data-price="55">
+                        <img src="media/icedTea.jpg" alt="icedTea" class="product" onclick="selectItem('icedTea', 55">
+                        <span>ICED TEA</span>
+                        <span>₱55</span>
+                    </div>
+                    
+                    <div class="item" data-item="Lemonade" data-price="45">
+                        <img src="media/lemonade.jpg" alt="Lemonade" class="product" onclick="selectItem('Lemonade', 45)">
+                        <span>LEMONADE</span>
+                        <span>₱45</span>
+                    </div>
+                    
+                    <div class="item" data-item="Hot Chocolate" data-price="40">
+                        <img src="media/hotChocolate.jpg" alt="Hot Chocolate" class="product" onclick="selectItem('Hot Chocolate', 40)">
+                        <span>HOT CHOCOLATE</span>
+                        <span>₱40</span>
+                    </div>
+                    
+                    <div class="item" data-item="Iced Latte" data-price="89">
+                        <img src="media/icedLatte.jpg" alt="Iced Latte" class="product" onclick="selectItem('Iced Latte', 89)">
+                        <span>ICED LATTE</span>
+                        <span>₱89</span>
+                    </div>
+                    
+                    <div class="item" data-item="Iced Mocha" data-price="89">
+                        <img src="media/icedMocha.jpg" alt="Iced Mocha" class="product" onclick="selectItem('Iced Mocha', 89)">
+                        <span>ICED MOCHA</span>
+                        <span>₱89</span>
+                    </div>
+                    
+                    <div class="item" data-item="Matcha Latte" data-price="85">
+                        <img src="media/matchaLatte.jpg" alt="Matcha Latte" class="product" onclick="selectItem('Matcha Latte', 85)">
+                        <span>MATCHA LATTE</span>
+                        <span>₱85</span>
+                    </div>
+                    
+                    <div class="item" data-item="Sprite" data-price="30">
+                        <img src="media/sprite.jpg" alt="Sprite" class="product" onclick="selectItem('Sprite', 30)">
+                        <span>SPRITE</span>
+                        <span>₱30</span>
+                    </div>
+                    
+                    <div class="item" data-item="Coke Zero" data-price="30">
+                        <img src="media/cokeZero.jpg" alt="Coke Zero" class="product" onclick="selectItem('Coke Zero', 30)">
+                        <span>COKE ZERO</span>
+                        <span>₱30</span>
+                    </div>
+                    
+                    <div class="item" data-item="Mountain Dew" data-price="20">
+                        <img src="media/mountainDew.jpg" alt="Mountain Dew" class="product" onclick="selectItem('Mountain Dew', 20)">
+                        <span>MOUNTAIN DEW</span>
+                        <span>₱20</span>
+                    </div>
+                    
+                    <div class="item" data-item="Royal" data-price="20">
+                        <img src="media/royal.jpg" alt="Royal" class="product" onclick="selectItem('Royal', 20)">
+                        <span>ROYAL</span>
+                        <span>₱20</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <!-- Options for quantity selection -->
+        <div id="quantityOptions">
+            <h2 class="shop">Select Quantity</h2>
+            <label>
+                <input type="radio" name="quantity" value="single" checked>
+                Single
+            </label>
+            <label>
+                <input type="radio" name="quantity" value="multiple">
+                Multiple
+            </label>
+            <input type="number" id="customQuantity" placeholder="Enter quantity" min="1" disabled>
         </div>
-        <div class="item" data-item="Sinigang" data-price="70">
-            <img src="image/bulb-off.png" alt="Item B" onclick="selectItem('Sinigang', 70)">
-            <span>Sinigang</span>
-            <span>$70</span>
+        
         </div>
-        <div class="item" data-item="Caldereta" data-price="100">
-            <img src="https://via.placeholder.com/50" alt="Item C" onclick="selectItem('Caldereta', 100)">
-            <span>Caldereta</span>
-            <span>$100</span>
+        <div id="right">
+            <!-- Cart for the user to view selected items -->
+            <div id="cart">
+                <h2 class="shop">Your Cart</h2>
+                <div id="cartItems"></div>
+                <div>
+                    <strong>Total:</strong> $<span id="totalPrice">0</span>
+                </div>
+                <button id="checkout" onclick="checkout()">Checkout</button>
+            </div>
+        
+            <!-- Receipt display -->
+            <h2 class="shop">Receipt:</h2>
+            <div id="receipt"></div>
+            <button onclick="printReceipt()">Print Receipt</button>
         </div>
     </div>
-
-    <!-- Options for quantity selection -->
-    <div id="quantityOptions">
-        <h2>Select Quantity</h2>
-        <label>
-            <input type="radio" name="quantity" value="single" checked>
-            Single
-        </label>
-        <label>
-            <input type="radio" name="quantity" value="multiple">
-            Multiple
-        </label>
-        <input type="number" id="customQuantity" placeholder="Enter quantity" min="1" disabled>
-    </div>
-
-    <!-- Cart for the user to view selected items -->
-    <div id="cart">
-        <h2>Your Cart</h2>
-        <div id="cartItems"></div>
-        <div>
-            <strong>Total:</strong> $<span id="totalPrice">0</span>
-        </div>
-        <button onclick="checkout()">Checkout</button>
-    </div>
-
-    <!-- Receipt display -->
-    <h2>Receipt:</h2>
-    <div id="receipt"></div>
-    <button onclick="printReceipt()">Print Receipt</button>
-
+        
     <script src="script.js"></script>
 </body>
 </html>
