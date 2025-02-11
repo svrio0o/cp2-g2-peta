@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern POS System</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>SHOP</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+    <h1> POS System</h1>
+
+    <!-- Items available for purchase -->
+    <div id="items">
+        <h2>Available Items</h2>
+        <!-- Define each item as a clickable image -->
+        <div class="item" data-item="Adobo" data-price="50">
+            <img src="https://via.placeholder.com/50" alt="Item A" onclick="selectItem('Adobo', 50)">
+            <span>Adobo</span>
+            <span>$50</span>
+        </div>
+        <div class="item" data-item="Sinigang" data-price="70">
+            <img src="image/bulb-off.png" alt="Item B" onclick="selectItem('Sinigang', 70)">
+            <span>Sinigang</span>
+            <span>$70</span>
+        </div>
+        <div class="item" data-item="Caldereta" data-price="100">
+            <img src="https://via.placeholder.com/50" alt="Item C" onclick="selectItem('Caldereta', 100)">
+            <span>Caldereta</span>
+            <span>$100</span>
+        </div>
+    </div>
+
+    <!-- Options for quantity selection -->
+    <div id="quantityOptions">
+        <h2>Select Quantity</h2>
+        <label>
+            <input type="radio" name="quantity" value="single" checked>
+            Single
+        </label>
+        <label>
+            <input type="radio" name="quantity" value="multiple">
+            Multiple
+        </label>
+        <input type="number" id="customQuantity" placeholder="Enter quantity" min="1" disabled>
+    </div>
+
+    <!-- Cart for the user to view selected items -->
+    <div id="cart">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div>
+            <strong>Total:</strong> $<span id="totalPrice">0</span>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <!-- Receipt display -->
+    <h2>Receipt:</h2>
+    <div id="receipt"></div>
+    <button onclick="printReceipt()">Print Receipt</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
