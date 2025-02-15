@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" type="image/png" href="media/logo.png"> 
     <title>Modern POS System</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
@@ -19,14 +19,13 @@
     </div>
     <div id="whole">
         <div id="left">
-            <!-- Items available for purchase -->
             <div id="items">
                 <h2 class="shop">Menu</h2>
                 
                 <h4>Meals</h4>
                 <div class="menu">
-                    <div class="item" data-item="Fish & Chips" data-price="100">
-                        <img src="media/fishAndChips.jpg" alt="Fish & Chips" class="product" onclick="selectItem('Fish & Chips', 100)">
+                    <div class="item" data-item="Fish & Chips" onclick="selectItem('Fish & Chips', 100)" data-price="100">
+                        <img src="media/fishAndChips.jpg" alt="Fish & Chips" class="product" >
                         <span>FISH & CHIPS</span>
                         <span>₱100</span>
                     </div>
@@ -104,7 +103,6 @@
 
                 <h4>Drinks</h4>
                 <div class="menu">
-                <!-- Define each item as a clickable image -->
                     <div class="item" data-item="Adobo" data-price="55">
                         <img src="media/icedTea.jpg" alt="icedTea" class="product" onclick="selectItem('icedTea', 55">
                         <span>ICED TEA</span>
@@ -166,10 +164,9 @@
                     </div>
                 </div>
             </div>
-        
-        
-        <!-- Options for quantity selection -->
-        <div id="quantityOptions">
+        </div>
+        <div id="right">
+            <div id="quantityOptions">
             <h2 class="shop">Select Quantity</h2>
             <label>
                 <input type="radio" name="quantity" value="single" checked>
@@ -181,10 +178,6 @@
             </label>
             <input type="number" id="customQuantity" placeholder="Enter quantity" min="1" disabled>
         </div>
-        
-        </div>
-        <div id="right">
-            <!-- Cart for the user to view selected items -->
             <div id="cart">
                 <h2 class="shop">Your Cart</h2>
                 <div id="cartItems"></div>
@@ -192,12 +185,12 @@
                     <strong>Total:</strong> $<span id="totalPrice">0</span>
                 </div>
                 <button id="checkout" onclick="checkout()">Checkout</button>
+                </div>
+            <div class="receipt">
+                <h2 class="shop">Receipt:</h2>
+                <div id="receipt"></div>
+                <button onclick="printReceipt()">Print Receipt</button>
             </div>
-        
-            <!-- Receipt display -->
-            <h2 class="shop">Receipt:</h2>
-            <div id="receipt"></div>
-            <button onclick="printReceipt()">Print Receipt</button>
         </div>
     </div>
         
