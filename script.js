@@ -129,10 +129,21 @@ Thank you for shopping with us!
     updateCartDisplay();
 }
 
-// print the receipt
 function printReceipt() {
-    window.print(); // Trigger print dialog
+    const receiptContent = document.getElementById('receipt').innerText; // Get receipt text
+    
+    if (!receiptContent.trim()) {
+        alert("No receipt available to print.");
+        return;
+    }
+
+    // Open a new print window
+    const printWindow = window.open('', '', 'width=600,height=600');
+    printWindow.document.write(`<pre>${receiptContent}</pre>`); // Use <pre> to preserve formatting
+    printWindow.document.close();
+    printWindow.print();
 }
+
 
 // enable or disable custom quantity input
 const quantityRadios = document.querySelectorAll('input[name="quantity"]');
