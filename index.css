@@ -32,6 +32,13 @@
     bottom: 40px;
     border-radius: 20px;
 }
+
+#cart > div:nth-child(3) {
+    margin: 0 0 100px 0;
+    
+}
+
+
 #left {
     max-width: 99vw;
     width: 99vw;
@@ -143,6 +150,7 @@ h1, h2 {
 /* Set styling for the radio buttons and input fields */
 input[type="radio"], input[type="number"] {
     margin: 5px;
+    font-size: 30px;
 }
 
 
@@ -207,7 +215,8 @@ li button {
 
 #cartItems div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 /* Print-specific styles */
@@ -283,3 +292,4 @@ button.navigation {
     color: #000000;
     font-size: 20px;
 } 
+
